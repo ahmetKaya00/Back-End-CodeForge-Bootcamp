@@ -1,13 +1,10 @@
 @model List<Bootcamp>
 
     <h2>Bootcamp Listesi</h2>
-    <br>
+    <hr>
     @foreach(var bootcamp in Model)
     {
-        <div id="@bootcamp.Id">
-            <img src="~/img/@bootcamp.Image" alt = "BootcampResim" style="width: 250px;">
-            <h4>@bootcamp.Title</h4>
-            <p>@bootcamp.Description</p>
-            <p>@bootcamp.Instructor</p>
-        </div>
+        @if(bootcamp.isActive){
+        @await Html.PartialAsync("_List",bootcamp);
+        }
     }

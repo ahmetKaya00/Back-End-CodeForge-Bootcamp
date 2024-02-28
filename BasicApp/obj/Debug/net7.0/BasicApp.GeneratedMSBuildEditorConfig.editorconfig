@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Bootcamp/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Bootcamp/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,12 +30,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Bootcamp/_List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcX0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Shared/_Slider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TbGlkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BasicApp/Views/Shared/_ValidationScriptsPartial.cshtml]

@@ -28,3 +28,4 @@ C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp\obj
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp\obj\Debug\net7.0\BasicApp.pdb
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp\obj\Debug\net7.0\BasicApp.genruntimeconfig.cache
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp\obj\Debug\net7.0\ref\BasicApp.dll
+C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BasicApp\obj\Debug\net7.0\BasicApp.sourcelink.json

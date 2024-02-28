@@ -1,0 +1,20 @@
+@model Bootcamp
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mt-1">@Model.Title</h1><hr>
+            <img src="~/img/@Model.Image" alt="" class="img-fluid mb-5">
+            <p class="card-title">@Model.Description</p>
+            <div>
+                @if(Model.tag != null){
+                @foreach(var tag in Model.tag){
+                    <span class="badge bg-warning">@tag</span>
+                }
+                }
+            </div>
+            <p class="lead">@Model.Instructor</p>
+
+        </div>
+    </div>
+</div>
