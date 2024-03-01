@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model PrdouctViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -6,15 +6,15 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.ProductId)</th>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.Image)</th>
-            <th>@Html.DisplayNameFor(m=>m.BookName)</th>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.PageCount)</th>
+            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.Products[0].ProductId)</th>
+            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.Products[0].Image)</th>
+            <th>@Html.DisplayNameFor(m=>m.Products[0].BookName)</th>
+            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.Products[0].PageCount)</th>
             <th style="width: 160px;">Setting</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var book in @Model){
+        @foreach(var book in @Model.Products){
             <tr>
                 <td>@book.ProductId</td>
                 <td><img src="~/img/@book.Image" class="img-fluid" alt=""></td>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model PrdouctViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -8,7 +8,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <select name="category" asp-items="ViewBag.Categories" class="form-select">
+                    <select name="category" class="form-select" 
+                    asp-items="@(new SelectList(Model.Categories,"CategoryId","Name",Model.SelectedCategory))" >
                         <option value="0">Hepsi</option>
                     </select>
                 </div>
@@ -19,29 +20,17 @@
         </div>
     </form>
 </div>
-
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.ProductId)</th>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.Image)</th>
-            <th>@Html.DisplayNameFor(m=>m.BookName)</th>
-            <th style="width: 100px;">@Html.DisplayNameFor(m=>m.PageCount)</th>
-            <th style="width: 160px;">Setting</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var book in @Model){
-            <tr>
-                <td>@book.ProductId</td>
-                <td><img src="~/img/@book.Image" class="img-fluid" alt=""></td>
-                <td>@book.BookName</td>
-                <td>@book.PageCount</td>
-                <td>
-                    <a href="" class="btn btn-primary">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
+<div class="row container">
+        @foreach(var book in @Model.Products){
+            <div class="col-md-3 mb-2" style="width: 18rem;">
+                <div class="card">
+                    <img src="~/img/@book.Image" alt="" class="card-img-top img-fluid mt-1" style="height: 200px; object-fit: contain;">
+                    <div class="card-body">
+                        <h5 class="card-title">@book.BookName</h5>
+                        <p class="card-text">Sayfa: @book.PageCount</p>
+                        <a href="/Home/Details/@book.ProductId" class="btn btn-primary">Detay</a>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+</div>
