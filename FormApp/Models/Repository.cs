@@ -26,6 +26,13 @@ namespace FormApp.Models
                 entity.PageCount = updateProduct.PageCount;
                 entity.Image = updateProduct.Image;
                 entity.CategoryId = updateProduct.CategoryId;
+                entity.IsActive = updateProduct.IsActive;
+            }
+        }
+        public static void DeleteProduct(Product entitys){
+            var entity = _product.FirstOrDefault(b => b.ProductId == entitys.ProductId);
+            if(entity != null){
+                _product.Remove(entity);
             }
         }
         public static List<Category> Categories{get{return _category;}}

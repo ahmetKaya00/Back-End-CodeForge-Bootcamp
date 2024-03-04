@@ -48,7 +48,7 @@ public class HomeController : Controller
             return NotFound();
         }
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId","Name");
-        return View(entity);
+        return View(entity );
     }
     public IActionResult Admin()
     {
@@ -128,5 +128,30 @@ public class HomeController : Controller
         }    
         ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId","Name");
         return View(model);
+    }
+
+    public IActionResult Delete(int? id){
+        if(id == null){
+            return NotFound();
+        }
+        var entity = Repository.Products.FirstOrDefault(b => b.ProductId == id);
+        if(entity == null){
+            return NotFound();
+        }
+        return View("DeleteBooks",entity);
+    }
+
+    [HttpPost]
+    public IActionResult Delete(int id, int ProductId){
+        if(id != ProductId){
+            return NotFound();
+        }
+        
+        var entity = Repository.Products.FirstOrDefault(b => b.ProductId == ProductId); 
+        if(entity == null){
+            return NotFound();
+        }
+        Repository.DeleteProduct(entity);
+        return RedirectToAction("Admin");
     }
 }

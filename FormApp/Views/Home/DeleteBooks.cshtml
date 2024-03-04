@@ -1,0 +1,10 @@
+@model Product
+
+<div>
+    <p>@Model.BookName isimli kitabı silmek istediğine emin misin ?</p>
+    <form action="" method="post">
+        <input type="hidden" asp-for="@Model.ProductId">
+        <button type="submit" class="btn btn-danger">Evet</button>
+        <a href="/" class="btn btn-primary">İptal</a>
+    </form>
+</div>

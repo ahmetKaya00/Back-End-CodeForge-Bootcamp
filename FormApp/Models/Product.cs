@@ -19,8 +19,6 @@ namespace FormApp.Models
 
         [Display(Name = "Gorsel")]
         public string? Image { get; set; } = string.Empty;
-
-        [Display(Name = "Aktiflik")]
         public bool IsActive {get;set;}
 
         [Display(Name = "Kategori Id")]
