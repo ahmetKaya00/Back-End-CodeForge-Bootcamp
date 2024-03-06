@@ -1,0 +1,11 @@
+@model Bootcamp
+
+<h2>Kurs Ekle</h2>
+<hr>
+<form asp-controller="Bootcamp" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Baslik" class="form-label">Bootcamp Adı</label>
+        <input asp-for="Baslik" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

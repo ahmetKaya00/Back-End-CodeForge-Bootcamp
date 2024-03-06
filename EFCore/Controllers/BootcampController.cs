@@ -4,26 +4,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EFCore.Controllers
 {
-    public class OgrenciController:Controller{
-
+    public class BootcampController:Controller{
         private readonly DataContext _context;
 
-        public OgrenciController(DataContext context){
+        public BootcampController(DataContext context){
             _context = context;
         }
-        
-        public async Task<IActionResult>Index(){
-            var ogrenciler = await _context.Ogrenciler.ToListAsync();
-            return View(ogrenciler);
+
+        public async Task<IActionResult> Index(){
+            var bootcamps = await _context.Bootcamps.ToListAsync();
+            return View(bootcamps);
         }
+
         public IActionResult Create(){
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Ogrenci model){
-
-            _context.Ogrenciler.Add(model);
+        public async Task<IActionResult> Create(Bootcamp model){
+            _context.Bootcamps.Add(model);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -33,19 +32,19 @@ namespace EFCore.Controllers
             if(id == null){
                 return NotFound();
             }
-            var ogr = await _context.Ogrenciler.FindAsync(id);
-            if(ogr == null){
+            var bootcamp = await _context.Bootcamps.FindAsync(id);
+            if(bootcamp == null){
                 return NotFound();
             }
-            return View(ogr);
+            return View(bootcamp);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult>Edit(int? id, Ogrenci model){
+        public async Task<IActionResult>Edit(int? id, Bootcamp model){
 
-            if(id != model.OgrenciId){
+            if(id != model.KursId){
                 return NotFound();
             }
             if(ModelState.IsValid){
@@ -56,38 +55,40 @@ namespace EFCore.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if(!_context.Ogrenciler.Any(o=>o.OgrenciId == model.OgrenciId)){
+                    if(!_context.Bootcamps.Any(o=>o.KursId == model.KursId)){
                         return NotFound();
                     }
                     else{
                         throw;
                     }
                 }
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            return View(model);
         }
-
-        [HttpGet]
-        public async Task<IActionResult>Delete(int? id){
+        public async Task<IActionResult> Delete(int? id){
             if(id == null){
                 return NotFound();
             }
-            var ogrenci = await _context.Ogrenciler.FindAsync(id);
-            if(ogrenci == null){
-                return NotFound();
-            }
-            return View(ogrenci);
-        }
 
-        [HttpPost]
-        public async Task<IActionResult> Delete([FromForm]int id){
-            var ogrenci = await _context.Ogrenciler.FindAsync(id);
-            if(ogrenci==null){
+            var bootcamp = await _context.Bootcamps.FindAsync(id);
+            if(bootcamp == null){
                 return NotFound();
             }
-            _context.Ogrenciler.Remove(ogrenci);
+            return View(bootcamp);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> Delete([FromForm]int id){
+            var bootcamp = await _context.Bootcamps.FindAsync(id);
+            if(bootcamp == null){
+                return NotFound();
+            }
+
+            _context.Bootcamps.Remove(bootcamp);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
+
         }
     }
 }

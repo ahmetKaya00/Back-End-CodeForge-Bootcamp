@@ -1,0 +1,12 @@
+@model Bootcamp
+
+<h2>Bootcamp Güncelle</h2>
+<hr>
+<form asp-controller="Bootcamp" asp-action="edit" method="post">
+    <input type="hidden" asp-for="KursId">
+    <div class="mb-3">
+        <label asp-for="Baslik" class="form-label">Bootcamp Adı</label>
+        <input asp-for="Baslik" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

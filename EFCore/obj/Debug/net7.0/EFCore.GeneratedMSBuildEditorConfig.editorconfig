@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\EFCore
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Bootcamp/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Bootcamp/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Bootcamp/edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Bootcamp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9vdGNhbXBcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Ogrenci/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxjcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Ogrenci/delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2dyZW5jaVxkZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/EFCore/Views/Ogrenci/edit.cshtml]
