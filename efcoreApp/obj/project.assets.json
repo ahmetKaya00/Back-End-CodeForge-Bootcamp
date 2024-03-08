@@ -1270,11 +1270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kaya3\\OneDrive\\Masaüstü\\efcoreApp\\efcoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Back-End-CodeForge-Bootcamp\\efcoreApp\\efcoreApp.csproj",
       "projectName": "efcoreApp",
-      "projectPath": "C:\\Users\\Kaya3\\OneDrive\\Masaüstü\\efcoreApp\\efcoreApp.csproj",
+      "projectPath": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Back-End-CodeForge-Bootcamp\\efcoreApp\\efcoreApp.csproj",
       "packagesPath": "C:\\Users\\Kaya3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kaya3\\OneDrive\\Masaüstü\\efcoreApp\\obj\\",
+      "outputPath": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Back-End-CodeForge-Bootcamp\\efcoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kaya3\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,35 +1,29 @@
 using efcoreApp.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace efcoreApp.Controllers
 {
-    public class BootcampController:Controller
-    {
+    public class EgitmenController:Controller{
         private readonly DataContext _context;
-        public BootcampController(DataContext context)
+        public EgitmenController(DataContext context)
         {
             _context = context;
         }
 
         public async Task<IActionResult> Index()
         {
-            var kurslar = await _context.Bootcamps.Include(b=>b.Egitmen).ToListAsync();
-            return View(kurslar);
+            return View(await _context.Egitmenler.ToListAsync());
         }
-
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
-            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(), "OgretmenId","AdSoyad");
             return View();
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Bootcamp model)
+        public async Task<IActionResult> Create(Egitmen model)
         {
-            _context.Bootcamps.Add(model);
+            _context.Egitmenler.Add(model);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
@@ -42,24 +36,23 @@ namespace efcoreApp.Controllers
                 return NotFound();
             }
 
-            var kurs = await _context.Bootcamps
-                                     .Include(k=>k.KursKayitlari)
-                                     .ThenInclude(k=>k.Ogrenci)
-                                     .FirstOrDefaultAsync(k=>k.KursId == id);
+            var entity = await _context
+                            .Egitmenler
+                            .FirstOrDefaultAsync(o=>o.OgretmenId == id);
 
-            if(kurs == null) 
+            if(entity == null) 
             {
                 return NotFound();
             }
-            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(), "OgretmenId","AdSoyad");
-            return View(kurs);
+
+            return View(entity);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Bootcamp model)
+        public async Task<IActionResult> Edit(int id, Egitmen model)
         {
-            if(id != model.KursId)
+            if(id != model.OgretmenId)
             {
                 return NotFound();
             }
@@ -71,9 +64,9 @@ namespace efcoreApp.Controllers
                     _context.Update(model);
                     await _context.SaveChangesAsync();
                 }
-                catch(DbUpdateException)
+                catch(DbUpdateConcurrencyException)
                 {
-                    if(!_context.Bootcamps.Any(o => o.KursId == model.KursId))
+                    if(!_context.Egitmenler.Any(o => o.OgretmenId == model.OgretmenId))
                     {
                         return NotFound();
                     } 
@@ -87,7 +80,6 @@ namespace efcoreApp.Controllers
 
             return View(model);
         }
-
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -96,27 +88,28 @@ namespace efcoreApp.Controllers
                 return NotFound();
             }
 
-            var kurs = await _context.Bootcamps.FindAsync(id);
+            var egitmen = await _context.Egitmenler.FindAsync(id);
 
-            if(kurs == null)
+            if(egitmen == null)
             {
                 return NotFound();
             }
 
-            return View(kurs);
+            return View(egitmen);
         }
 
         [HttpPost]
         public async Task<IActionResult> Delete([FromForm]int id)
         {
-            var kurs = await _context.Bootcamps.FindAsync(id);
-            if(kurs == null)
+            var egitmen = await _context.Egitmenler.FindAsync(id);
+            if(egitmen == null)
             {
                 return NotFound();
             }
-            _context.Bootcamps.Remove(kurs);
+            _context.Egitmenler.Remove(egitmen);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
     }
 }

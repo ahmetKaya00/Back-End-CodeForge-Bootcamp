@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lx6P6py+Ytwx/LlWjAB30jgrYn2WOFQqC1MvlueJGMU9ux9O6juux+aFqLmJhKtHxHVeI1crXhVRZHln6AGsnw==",
+  "dgSpecHash": "p3Gs/riQs3h5smVq81WlAEBQ6bdecP4zlLCNMhFVdd3gageyyq/xsgEpBhQC+8/ms1v7Q1DZQPNcLCX3PanZpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kaya3\\OneDrive\\Masaüstü\\efcoreApp\\efcoreApp.csproj",
+  "projectFilePath": "C:\\Users\\Kaya3\\OneDrive\\Belgeler\\GitHub\\Back-End-CodeForge-Bootcamp\\efcoreApp\\efcoreApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaya3\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Kaya3\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.8\\microsoft.data.sqlite.core.7.0.8.nupkg.sha512",
