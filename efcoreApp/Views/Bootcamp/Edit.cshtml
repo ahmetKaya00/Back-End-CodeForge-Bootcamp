@@ -1,4 +1,4 @@
-@model Bootcamp
+@model BootcampViewModel
 
 <h2>Kurs Güncelle</h2>
 <hr>
@@ -26,7 +26,7 @@
         <h4>Kayıtlı Öğrenciler</h4>
         <hr>
         <ul>
-        @foreach(var item in @Model.KursKayitlari){
+        @foreach(var item in @Model.Kayitlar){
             <li>@item.Ogrenci.AdSoyad</li>
          }
         </ul>

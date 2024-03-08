@@ -1,8 +1,9 @@
-@model Bootcamp
+@model BootcampViewModel
 
 <h2>Kurs Ekle</h2>
 <hr>
 <form asp-controller="Bootcamp" asp-action="Create" method="post">
+    <div asp-validation-summary="All"></div>
     <div class="mb-3">
         <label asp-for="Baslik" class="form-label">Baslik</label>
         <input asp-for="Baslik" class="form-control">

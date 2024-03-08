@@ -1,4 +1,5 @@
 using efcoreApp.Data;
+using efcoreApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -27,11 +28,16 @@ namespace efcoreApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Bootcamp model)
+        public async Task<IActionResult> Create(BootcampViewModel model)
         {
-            _context.Bootcamps.Add(model);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid){
+                _context.Bootcamps.Add(new Bootcamp(){KursId = model.KursId, Baslik = model.Baslik, EgitmenId = model.EgitmenId});
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            ViewBag.Egitmenler = new SelectList(await _context.Egitmenler.ToListAsync(), "OgretmenId","AdSoyad");
+
+            return View(model);
         }
 
         [HttpGet]
@@ -45,6 +51,12 @@ namespace efcoreApp.Controllers
             var kurs = await _context.Bootcamps
                                      .Include(k=>k.KursKayitlari)
                                      .ThenInclude(k=>k.Ogrenci)
+                                     .Select(k=> new BootcampViewModel{
+                                        KursId = k.KursId,
+                                        Baslik = k.Baslik,
+                                        EgitmenId = k.EgitmenId,
+                                        Kayitlar = k.KursKayitlari                                  
+                                     })
                                      .FirstOrDefaultAsync(k=>k.KursId == id);
 
             if(kurs == null) 
@@ -57,7 +69,7 @@ namespace efcoreApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Bootcamp model)
+        public async Task<IActionResult> Edit(int id, BootcampViewModel model)
         {
             if(id != model.KursId)
             {
@@ -68,7 +80,7 @@ namespace efcoreApp.Controllers
             {
                 try
                 {
-                    _context.Update(model);
+                    _context.Update(new Bootcamp(){KursId = model.KursId, Baslik = model.Baslik, EgitmenId = model.EgitmenId});
                     await _context.SaveChangesAsync();
                 }
                 catch(DbUpdateException)
