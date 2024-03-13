@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BlogApp/Views/Posts/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kaya3/OneDrive/Belgeler/GitHub/Back-End-CodeForge-Bootcamp/BlogApp/Views/Posts/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

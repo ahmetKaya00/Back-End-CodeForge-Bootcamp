@@ -15,10 +15,11 @@ namespace BlogApp.Data.Concrete.EfCore
             }
             if(!context.Tags.Any()){
                 context.Tags.AddRange(
-                    new Tag {Text = "web programlama"},
-                    new Tag {Text = "backend"},
-                    new Tag {Text = "fullstack"},
-                    new Tag {Text = "game"}
+                    new Tag {Text = "web programlama", Url = "web-programlama", Color = TagColor.primary},
+                    new Tag {Text = "backend", Url = "backend", Color = TagColor.success},
+                    new Tag {Text = "fullstack", Url = "full-stack", Color = TagColor.danger},
+                    new Tag {Text = "game", Url = "game", Color = TagColor.secondary},
+                    new Tag {Text = "tech", Url = "tech", Color = TagColor.warning}
                 );       
                 context.SaveChanges(); 
             }
@@ -34,6 +35,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post{
                         Title = "Backend Bootcamp",
                         Content = "Backend dersleri işlenecek",
+                        Url = "backend-bootcamp",
                         Image = "1.jpeg",
                         IsActive = true,
                         PublisedOn = DateTime.Now.AddDays(-5),
@@ -43,6 +45,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post{
                         Title = "Unity Game Tutorial",
                         Content = "Unity ile oyun yapımı",
+                        Url = "unity-game-tutorial",
                         Image = "2.png",
                         IsActive = true,
                         PublisedOn = DateTime.Now.AddDays(-7),
@@ -52,10 +55,21 @@ namespace BlogApp.Data.Concrete.EfCore
                     new Post{
                         Title = "Asp.net Core Tutorial",
                         Content = "Web sitesi geliştireceğiz",
+                        Url = "asp-net-core",
                         Image = "3.png",
                         IsActive = true,
                         PublisedOn = DateTime.Now.AddDays(-10),
                         Tags = context.Tags.Take(3).ToList(),
+                        UserId = 2
+                    },
+                    new Post{
+                        Title = "React Bootcamp",
+                        Content = "Web sitesi geliştireceğiz",
+                        Url = "react",
+                        Image = "3.png",
+                        IsActive = true,
+                        PublisedOn = DateTime.Now.AddDays(-10),
+                        Tags = context.Tags.Take(1).ToList(),
                         UserId = 2
                     }
                 );
