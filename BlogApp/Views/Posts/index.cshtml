@@ -1,10 +1,10 @@
-@model List<Post>
+@model PostsViewModel
     <div class="row">
         <div class="col-lg-8">
             <div class="bg-white p-4">
                 <h1 class="h4 mb-4">Popüler Postlar</h1>
                 <hr class="my-3">
-                @foreach(var post in Model){
+                @foreach(var post in Model.Posts){
                      <div class="card bg-transparent border-0 mb-3">
                         <div class="row">
                             <div class="col-8">
@@ -23,7 +23,10 @@
 
         
         </div>
-    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <vc:tags-menu></vc:tags-menu>
+        <vc:new-posts></vc:new-posts>
+    </div>
     </div>
     
     

@@ -56,7 +56,6 @@ C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.BlogApp.props
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\scopedcss\bundle\BlogApp.styles.css
-C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\BlogApp.csproj.CopyComplete
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\BlogApp.dll
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\refint\BlogApp.dll
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\BlogApp.pdb
@@ -66,3 +65,4 @@ C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\BlogApp.RazorAssemblyInfo.cs
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\bin\Debug\net7.0\libman.json
 C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\bin\Debug\net7.0\BlogApp.staticwebassets.runtime.json
+C:\Users\Kaya3\OneDrive\Belgeler\GitHub\Back-End-CodeForge-Bootcamp\BlogApp\obj\Debug\net7.0\BlogApp.csproj.Up2Date

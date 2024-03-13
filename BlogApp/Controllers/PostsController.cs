@@ -1,18 +1,23 @@
 using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
+using BlogApp.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogApp.Controllers
 {
     public class PostsController : Controller{
 
-        private IPostRepository _context;
+        private IPostRepository _postRepository;
 
-        public PostsController(IPostRepository context){
-            _context = context;
+        public PostsController(IPostRepository postRepository){
+            _postRepository = postRepository;
         }
         public IActionResult Index(){
-            return View(_context.Posts.ToList());
+            return View(
+                new PostsViewModel{
+                    Posts = _postRepository.Posts.ToList(),
+                }
+            );
         }
     }
 }
