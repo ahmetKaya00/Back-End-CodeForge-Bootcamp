@@ -25,8 +25,8 @@ namespace BlogApp.Data.Concrete.EfCore
             }
             if(!context.Users.Any()){
                 context.Users.AddRange(
-                    new User {UserName = "ahmetkaya"},
-                    new User {UserName = "diclebahceli"}
+                    new User {UserName = "ahmetkaya", Image = "1.jpg"},
+                    new User {UserName = "diclebahceli", Image = "2.jpg"}
                 );
                 context.SaveChanges();
             }
@@ -40,7 +40,11 @@ namespace BlogApp.Data.Concrete.EfCore
                         IsActive = true,
                         PublisedOn = DateTime.Now.AddDays(-5),
                         Tags = context.Tags.Take(2).ToList(),
-                        UserId = 1
+                        UserId = 1,
+                        Comments = new List<Comment>{
+                            new Comment {Text = "Güzel bootcamp",PublishedOn = new DateTime(),UserId = 1},
+                            new Comment {Text = "Katılmayı düşünüyorum",PublishedOn = new DateTime(),UserId = 2},
+                        }
                     },
                     new Post{
                         Title = "Unity Game Tutorial",

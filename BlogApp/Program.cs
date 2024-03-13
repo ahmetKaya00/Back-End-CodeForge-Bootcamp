@@ -15,6 +15,7 @@ builder.Services.AddDbContext<BlogContext>(options =>{
 
 builder.Services.AddScoped<IPostRepository,EfPostRepository>();
 builder.Services.AddScoped<ITagRepository,EfTagRepository>();
+builder.Services.AddScoped<ICommentRepository,EfCommentRepository>();
 
 var app = builder.Build();
 
@@ -24,7 +25,7 @@ SeedData.TestVerileriniDoldur(app);
 
 app.MapControllerRoute(
     name: "post_details",
-    pattern: "posts/{url}",
+    pattern: "posts/details/{url}",
     defaults: new {controller = "Posts", action = "Details"}
 );
 app.MapControllerRoute(
