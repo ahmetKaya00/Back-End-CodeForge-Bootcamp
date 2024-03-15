@@ -11,15 +11,34 @@
 </head>
 <nav class="navbar navbar-expand-lg bg-white shadow-sm">
     <div class="container">
-        <a href="/" class="navbar-brand">
+        <a asp-controller="posts" asp-action="Index" class="navbar-brand">
             <i class="bi bi-card-text"></i> BlogApp
         </a>
+
+        <ul class="navbar-nav ms-auto">
+            @if(User.Identity!.IsAuthenticated){
+                <li class="nav-item">
+                <a href="#" class="nav-link">@User.Identity.Name</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user/loguot" class="nav-link">Logout</a>
+                </li>
+            }
+            else{
+                <li class="nav-item">
+                    <a href="/user/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/user/register" class="nav-link">Register</a>
+                </li>
+            }               
+        </ul>
     </div>
 </nav>
 <body>
     <div class="container mt-3">
      @RenderBody()
     </div>
-
+    @RenderSection("Script", required:false)
 </body>
 </html>
