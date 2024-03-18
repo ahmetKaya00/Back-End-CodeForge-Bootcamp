@@ -1,0 +1,60 @@
+@model PostCreateViewModel
+<div class="row">
+    <div class="col-9">
+        <h1>Post Edit</h1>
+        <form action="Edit" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="PostId">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control">
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label"></label>
+                <input asp-for="Description" class="form-control">
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Url" class="form-label"></label>
+                <input asp-for="Url" class="form-control">
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Content" class="form-label"></label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            @if(User.FindFirstValue(ClaimTypes.Role) == "admin"){
+                <div class="form-check mb-3">
+                    <input asp-for="IsActive" class="form-check-input">
+                    <label asp-for="IsActive" class="form-check-label"></label>
+                </div>
+            }
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <div class="bg-white p-2">
+            @foreach(var tag in ViewBag.Tags){
+            <div class="form-check">
+                <input type="checkbox" name="tagId" class="form-check-input" value="@tag.TagId" id="tag_@tag.TagId" 
+                @(Model.Tags.Any(i=>i.TagId == tag.TagId) ? "checked" : "")
+                >
+                <label for="tag_@tag.TagId" class="form-check-label"></label>
+                @tag.Text
+            </div>
+            }      
+        </div>
+    </div>
+</div>
+
+@section Script{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.3/tinymce.min.js" integrity="sha512-VCEWnpOl7PIhbYMcb64pqGZYez41C2uws/M/mDdGPy+vtEJHd9BqbShE4/VNnnZdr7YCPOjd+CBmYca/7WWWCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <script>
+        tinymce.init({
+            selector: 'textarea#Content'
+        });
+</script>
+}

@@ -9,7 +9,11 @@
                     }
                 </div>
                 <img src="~/img/@Model.Image" class="img-fluid rounded" alt="">
-               <div>@Model.Content</div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="bi bi-calendar"></i>@Model.PublisedOn.ToString("d")</li>
+                    <li class="list-inline-item"><i class="bi bi-person-circle"></i><a href="/profile/@Model.User.UserName">@Model.User.UserName</a></li>
+                </ul>
+               <div>@Html.Raw(@Model.Content)</div>
             </div>
         <div class="bg-white mt-3">
             <div class="card border-0">
@@ -23,7 +27,7 @@
                             <img src="~/img/@comment.User.Image" class="avatar rounded-circle float-start me-3" alt="">
                             <div>
                             <div class="mb-2 d-flex">
-                                <h6 class="me-2">@comment.User.UserName</h6>
+                                <h6 class="me-2"><a href="/profile/@comment.User.UserName">@comment.User.Name</a></h6>
                                 <span>@comment.PublishedOn.ToString("d")</span>
                             </div>
                             <p>@comment.Text</p>
@@ -32,7 +36,7 @@
                     }
                     </div>
 
-                    @if(User.Identity.IsAuthenticated){
+                    @if(User.Identity!.IsAuthenticated){
                 <hr class="my-4">
                     <div>
                         <h4>Yorum Ekle</h4>

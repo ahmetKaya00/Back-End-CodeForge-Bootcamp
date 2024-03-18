@@ -34,6 +34,7 @@ namespace BlogApp.Data.Concrete.EfCore
                 context.Posts.AddRange(
                     new Post{
                         Title = "Backend Bootcamp",
+                        Description = "Backend dersleri işlenecek",
                         Content = "Backend dersleri işlenecek",
                         Url = "backend-bootcamp",
                         Image = "1.jpeg",
@@ -48,6 +49,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     },
                     new Post{
                         Title = "Unity Game Tutorial",
+                        Description = "Unity ile oyun yapımı",
                         Content = "Unity ile oyun yapımı",
                         Url = "unity-game-tutorial",
                         Image = "2.png",
@@ -58,6 +60,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     },
                     new Post{
                         Title = "Asp.net Core Tutorial",
+                        Description = "Web sitesi geliştireceğiz",
                         Content = "Web sitesi geliştireceğiz",
                         Url = "asp-net-core",
                         Image = "3.png",
@@ -68,6 +71,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     },
                     new Post{
                         Title = "React Bootcamp",
+                        Description = "Web sitesi geliştireceğiz",
                         Content = "Web sitesi geliştireceğiz",
                         Url = "react",
                         Image = "3.png",
