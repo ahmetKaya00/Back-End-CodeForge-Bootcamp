@@ -6,6 +6,7 @@ namespace BlogApp.Data.Abstract
         IQueryable<Post> Posts {get;}
 
         void CreatePost(Post post);
+        void EditPost(Post post);
         void EditPost(Post post, int[] tagId);
     }   
 }
